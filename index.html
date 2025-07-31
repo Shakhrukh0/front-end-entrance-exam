@@ -1,13 +1,396 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" >
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Vite App</title>
+  <link rel="stylesheet" href="./css/style.css" >
+  <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+          rel="stylesheet"
+  >
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+</head>
+<body>
+<div id="app">
+  <main class="main" id="main">
+    <section class="first-block">
+      <div class="container">
+        <div class="first-block-items">
+          <div class="first-block-item item">
+            <div class="first-block-item-photo">
+              <img src="./img/profileImg.png" alt="profileImg" >
+            </div>
+          </div>
+          <div class="first-block-item item">
+            <div class="first-block-item-name">
+              <p class="hello-text">Hello 👋🏻 I'm</p>
+              <div class="name-block">
+                <p class="name">Graham Hunt</p>
+                <p class="role">Brand/Logo Designer</p>
+              </div>
+            </div>
+          </div>
+          <div class="first-block-item item">
+            <div class="first-block-item-languages">
+              <h1 class="main-title">Languages</h1>
+              <div class="languages-block">
+                <div class="languages">
+                  <p class="language">English</p>
+                  <p class="language">Spanish</p>
+                  <p class="language">French</p>
+                </div>
+                <div class="languages-level">
+                  <input
+                          type="range"
+                          class="level"
+                          value="100"
+                          min="0"
+                          max="100"
+                          oninput="this.style.setProperty('--value', this.value+'%')"
+                  >
+                  <input
+                          type="range"
+                          class="level"
+                          value="78"
+                          min="0"
+                          max="100"
+                          oninput="this.style.setProperty('--value', this.value+'%')"
+                  >
+                  <input
+                          type="range"
+                          class="level"
+                          value="67"
+                          min="0"
+                          max="100"
+                          oninput="this.style.setProperty('--value', this.value+'%')"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="second-block">
+      <div class="container">
+        <div class="second-block-items">
+          <div class="second-block-item item">
+            <div class="second-block-item-education">
+              <h1 class="main-title">Education</h1>
+              <div class="education-blocks">
+                <div class="education-block green-card" id="card-one-block">
+                  <div class="year-block">
+                    <p class="education-block-year">2024</p>
+                    <svg
+                            width="11"
+                            height="11"
+                            viewBox="0 0 11 11"
+                            fill="none"
+                            class="heart"
+                            xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                              class="heart-svg yellow"
+                              id="card-one"
+                              d="M2.75 0.807373C1.99375 0.807373 1.32 1.12388 0.81125 1.61929C0.31625 2.1147 0 2.78901 0 3.55965C0 4.31653 0.31625 4.99083 0.81125 5.5L5.5 10.1926L10.1887 5.5C10.6837 5.00459 11 4.33029 11 3.55965C11 2.80277 10.6837 2.12847 10.1887 1.61929C9.69375 1.12388 9.02 0.807373 8.25 0.807373C7.49375 0.807373 6.82 1.12388 6.31125 1.61929C5.81625 2.1147 5.5 2.78901 5.5 3.55965C5.5 2.80277 5.18375 2.12847 4.68875 1.61929C4.19375 1.12388 3.52 0.807373 2.75 0.807373Z"
+                              fill="yellow"
+                      />
+                    </svg>
+                  </div>
+                  <div class="education-block-info">
+                    <p class="title">UI/UX</p>
+                    <p class="tags">
+                      #UX
+                      #UI
+                      #research
+                      #DesignSystem
+                      #Agile
+                      #wireframing
+                      #figma
+                      #IA
+                    </p>
+                  </div>
+                  <p class="education-block-schoolName">Neoland</p>
+                </div>
+                <div class="education-block" id="card-two-block">
+                  <div class="year-block">
+                    <p class="education-block-year">2022</p>
+                    <svg
+                            width="11"
+                            height="11"
+                            viewBox="0 0 11 11"
+                            fill="none"
+                            class="heart"
+                            xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                              class="heart-svg"
+                              id="card-two"
+                              d="M2.75 0.807373C1.99375 0.807373 1.32 1.12388 0.81125 1.61929C0.31625 2.1147 0 2.78901 0 3.55965C0 4.31653 0.31625 4.99083 0.81125 5.5L5.5 10.1926L10.1887 5.5C10.6837 5.00459 11 4.33029 11 3.55965C11 2.80277 10.6837 2.12847 10.1887 1.61929C9.69375 1.12388 9.02 0.807373 8.25 0.807373C7.49375 0.807373 6.82 1.12388 6.31125 1.61929C5.81625 2.1147 5.5 2.78901 5.5 3.55965C5.5 2.80277 5.18375 2.12847 4.68875 1.61929C4.19375 1.12388 3.52 0.807373 2.75 0.807373Z"
+                              fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div class="education-block-info">
+                    <p class="title">Product designer</p>
+                    <p class="tags">
+                      #analytics
+                      #research
+                      #prototype
+                      #wireframes
+                    </p>
+                  </div>
+                  <p class="education-block-schoolName">
+                    Coursera
+                  </p>
+                </div>
+                <div class="education-block" id="card-three-block">
+                  <div class="year-block">
+                    <p class="education-block-year">2017-2021</p>
+                    <svg
+                            width="11"
+                            height="11"
+                            viewBox="0 0 11 11"
+                            fill="none"
+                            class="heart"
+                            xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                              class="heart-svg"
+                              id="card-three"
+                              d="M2.75 0.807373C1.99375 0.807373 1.32 1.12388 0.81125 1.61929C0.31625 2.1147 0 2.78901 0 3.55965C0 4.31653 0.31625 4.99083 0.81125 5.5L5.5 10.1926L10.1887 5.5C10.6837 5.00459 11 4.33029 11 3.55965C11 2.80277 10.6837 2.12847 10.1887 1.61929C9.69375 1.12388 9.02 0.807373 8.25 0.807373C7.49375 0.807373 6.82 1.12388 6.31125 1.61929C5.81625 2.1147 5.5 2.78901 5.5 3.55965C5.5 2.80277 5.18375 2.12847 4.68875 1.61929C4.19375 1.12388 3.52 0.807373 2.75 0.807373Z"
+                              fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div class="education-block-info">
+                    <p class="title">Graphic design</p>
+                    <p class="tags">
+                      #branding
+                      #web
+                      #illustration
+                      #adobe
+                    </p>
+                  </div>
+                  <p class="education-block-schoolName">Cali Institute of the Arts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="second-block-item item">
+            <div class="second-block-item-interests item">
+              <h1 class="main-title">Interests</h1>
+              <div class="interests-items">
+                <p class="interests-item">branding</p>
+                <p class="interests-item">brand identity</p>
+                <p class="interests-item">logo</p>
+                <p class="interests-item">typography</p>
+                <p class="interests-item">photography</p>
+                <p class="interests-item">designing</p>
+                <p class="interests-item">poster design</p>
+                <p class="interests-item">research</p>
+                <p class="interests-item">social networks</p>
+                <p class="interests-item">illustration</p>
+              </div>
+            </div>
+            <div class="second-block-item-contact item">
+              <p class="main-title">
+                Let´s chat! I´m ready to work on excinting projects
+              </p>
+              <p class="email">ivann19bj@gmail.com | +34 666 666 666</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="third-block">
+      <div class="container">
+        <div class="third-block-items">
+          <div class="third-block-item item">
+            <h1 class="main-title">Tools</h1>
+            <div class="third-block-item-tools">
+              <div class="tools-blocks">
+                <div class="tools-block">
+                  <p class="tools-black-block">design</p>
+                  <div class="logos-design">
+                    <img
+                            class="logo"
+                            src="img/logos/logoFigma.svg"
+                            alt="logoFigma"
+                    >
+                    <img
+                            class="logo"
+                            src="img/logos/logoCreativeCloud.svg"
+                            alt="logoCreativeCloud"
+                    >
+                    <img
+                            class="logo"
+                            src="img/logos/logoMiro%201.svg"
+                            alt="logoMiro%201"
+                    >
+                    <img
+                            class="logo"
+                            src="img/logos/logoNotion.svg"
+                            alt="logoNotion"
+                    >
+                    <img
+                            class="logo"
+                            src="img/logos/logoMeet.svg"
+                            alt="logoMeet"
+                    >
+                    <img
+                            class="logo"
+                            src="img/logos/logoanalytics.svg"
+                            alt="logoanalytics"
+                    >
+                  </div>
+                </div>
+                <div class="tools-block">
+                  <p class="tools-black-block">no-code</p>
+                  <div class="logos-design">
+                    <img
+                            class="logo"
+                            src="img/logos/logoZapìer%201.svg"
+                            alt="logoZapìer%201"
+                    >
+                    <img
+                            class="logo"
+                            src="img/logos/logoWebflow.svg"
+                            alt="logoWebflow"
+                    >
+                    <img
+                            class="logo"
+                            src="img/logos/logoFramer.svg"
+                            alt="logoFramer"
+                    >
+                    <img
+                            class="logo"
+                            src="img/logos/logoWordpress.svg"
+                            alt="logoWordpress"
+                    >
+                  </div>
+                </div>
+                <div class="tools-block">
+                  <p class="tools-black-block">artoficial intelligence</p>
+                  <div class="logos-design">
+                    <img
+                            class="logo"
+                            src="img/logos/logoChatGPT%201.svg"
+                            alt="logoChatGPT%201"
+                    >
+                    <img
+                            class="logo"
+                            src="img/logos/logoCopilot%201.svg"
+                            alt="logoCopilot%201"
+                    >
+                    <img
+                            class="logo"
+                            src="img/logos/logoMidjourney%201.svg"
+                            alt="logoMidjourney%201"
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="third-block-item item">
+            <h1 class="main-title">Experience</h1>
+            <div class="third-block-item-experience">
+              <div class="experience-block green-card" id="tag-one-block">
+                <div class="experience-block-topBar">
+                  <p class="date">Jul. 2023 - Ago. 2023</p>
+                  <div class="tag green-tag" id="tag-one">most recent</div>
+                </div>
+                <div class="experience-block-content">
+                  <div class="jobInfo">
+                    <p class="roleName">Senior Graphic Designer</p>
+                    <p class="info">Pinnacle | Full-time</p>
+                  </div>
+                  <div class="futurePoint">
+                    <ul>
+                      <li>
+                            <span class="futurePoint-text"
+                            >Research and brainstorm various design ideas for content and marketing.</span>
+                      </li>
+                      <li>
+                            <span class="futurePoint-text"
+                            >Review the work submitted by Junior Designers and sharing feedback.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="experience-block" id="tag-two-block">
+                <div class="experience-block-topBar">
+                  <p class="date">Ene. 2021 - Jul. 2023</p>
+                  <div class="tag" id="tag-two">most recent</div>
+                </div>
+                <div class="experience-block-content">
+                  <div class="jobInfo">
+                    <p class="roleName">Graphic / Web designer</p>
+                    <p class="info">Double Square | Full-time</p>
+                  </div>
+                  <div class="futurePoint">
+                    <ul>
+                      <li>
+                            <span class="futurePoint-text"
+                            >Development of internal projects from scratch, product design of brands.</span>
+                      </li>
+                      <li>
+                            <span class="futurePoint-text"
+                            >Landing page, webapps and hybrid apps</span>
+                      </li>
+                      <li>
+                            <span class="futurePoint-text"
+                            >Taking decisions with stakeholders for the future of products such as Beagle labs, myur...</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="experience-block" id="tag-three-block">
+                <div class="experience-block-topBar">
+                  <p class="date">Feb. 2021 - Jul. 2023</p>
+                  <div class="tag green" id="tag-three">most recent</div>
+                </div>
+                <div class="experience-block-content">
+                  <div class="jobInfo">
+                    <p class="roleName">Graphic Designer</p>
+                    <p class="info">Freelance</p>
+                  </div>
+                  <div class="futurePoint">
+                    <ul>
+                      <li>
+                            <span class="futurePoint-text"
+                            >Visual design for Events, Brands and Products.</span>
+                      </li>
+                      <li>
+                            <span class="futurePoint-text"
+                            >Product design, Packaging Design</span>
+                      </li>
+                      <li>
+                            <span class="futurePoint-text"
+                            >Logo Design</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="container-download-button">
+    <div class="container">
+      <button class="button ripple" id="download">Download</button>
+      <button class="button ripple" id="reset">Reset</button>
+    </div>
+  </div>
+</div>
+<script type="module" src="./js/main.js"></script>
+</body>
 </html>
